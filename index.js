@@ -393,8 +393,8 @@ function BeeSwarmSimulator(DATA){
         {item:'tropicalDrink',req:[['coconut',5],['oil',1],['enzymes',1]]},
         {item:'glitter',req:[['moonCharm',0],['magicBean',0]]},
         {item:'starJelly',req:[['royalJelly',75],['glitter',3]]},
-        {item:'purplePotion',req:[['neonberry',0],['redExtract',0],['blueExtract',0],['glue',0]]},
-        {item:'superSmoothie',req:[['neonberry',0],['starJelly',0],['purplePotion',0],['tropicalDrink',0]]},
+        {item:'purplePotion',req:[['strawberry',1]]},
+        {item:'superSmoothie',req:[['strawberry',1]]},
         {item:'fieldDice',req:[['softWax',1],['whirligig',1],['redExtract',1],['blueExtract',1]]},
         {item:'smoothDice',req:[['fieldDice',2],['whirligig',2],['softWax',2],['oil',2]]},
         {item:'loadedDice',req:[['smoothDice',2],['hardWax',1],['oil',2],['glue',1]]},
@@ -4736,16 +4736,16 @@ function BeeSwarmSimulator(DATA){
             
             update:(amount,player)=>{
                 
-                player.capacity*=1.25
-                player.redPollen*=1.5
-                player.bluePollen*=1.5
-                player.pollenFromTools*=1.3
-                player.pollenFromBees*=1.3
+                player.capacity*=10
+                player.redPollen*=10
+                player.bluePollen*=10
+                player.pollenFromTools*=10
+                player.pollenFromBees*=10
             },
             
             getMessage:(amount)=>{
                 
-                return 'Purple Potion\nx1.25 capacity\nx1.5 pollen\nx1.3 pollen from tools\nx1.3 pollen from bees'
+                return 'Purple Potion\nx10 capacity\nx10 pollen\nx10 pollen from tools\nx10 pollen from bees'
             }
         },
         
