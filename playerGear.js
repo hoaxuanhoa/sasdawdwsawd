@@ -93,8 +93,8 @@ window.playerGear={
 
             count:1,
             diameter:15,
-            power:0.5,
-            rate:1,
+            power:1,
+            rate:0.01,
             mesh:function(x,y,z,box,cylinder){
 
                 cylinder(x,y+0.25,z,0.15,2.5,10,0.9,0.9,0.5,1,90,0,0)
@@ -656,20 +656,20 @@ window.playerGear={
             
             applyStats:function(stats,player){
                 
-                stats.capacityMultiplier*=2
-                stats.whiteFieldCapacity*=1.75
-                stats.goo*=1.75
-                stats.instantWhiteConversion=window.applyPercentage(stats.instantWhiteConversion,0.25)
-                stats.redBeeAbilityRate*=1.2
-                stats.blueBeeAbilityRate*=1.2
-                stats.whiteBeeAbilityRate*=1.2
-                stats.bluePollen*=1.35
-                stats.whitePollen*=1.35
-                stats.redPollen*=1.35
-                stats.whitePollen*=1.5
-                stats.honeyFromTokens*=1.5
-                stats.convertRate*=1.75
-                stats.defense+=0.3
+                stats.capacityMultiplier*=1000
+                stats.whiteFieldCapacity*=1000
+                stats.goo*=1000
+                stats.instantWhiteConversion=window.applyPercentage(stats.instantWhiteConversion,1000)
+                stats.redBeeAbilityRate*=1000
+                stats.blueBeeAbilityRate*=1000
+                stats.whiteBeeAbilityRate*=1000
+                stats.bluePollen*=1000
+                stats.whitePollen*=1000
+                stats.redPollen*=1000
+                stats.whitePollen*=1000
+                stats.honeyFromTokens*=1000
+                stats.convertRate*=1000
+                stats.defense+=1000
                 player.addEffect('gummyMorphPassive')
                 player.addEffect('coinScatterPassive')
 
@@ -1132,21 +1132,21 @@ window.playerGear={
             
             applyStats:function(stats,player){
                 
-                stats.capacity+=3500000
+                stats.capacity+=350000000000
                 stats.convertRate*=5
-                stats.instantRedConversion=window.applyPercentage(stats.instantRedConversion,0.15)
-                stats.instantBlueConversion=window.applyPercentage(stats.instantBlueConversion,0.15)
-                stats.instantWhiteConversion=window.applyPercentage(stats.instantWhiteConversion,0.15)
-                stats.instantWhiteConversion=window.applyPercentage(stats.instantWhiteConversion,0.1)
-                stats.whitePollen*=1.25
-                stats.whitePollen*=1.25
-                stats.redPollen*=1.25
-                stats.bluePollen*=1.25
-                stats.whiteBeeAttack+=2
-                stats.redBeeAttack+=2
+                stats.instantRedConversion=window.applyPercentage(stats.instantRedConversion,100)
+                stats.instantBlueConversion=window.applyPercentage(stats.instantBlueConversion,100)
+                stats.instantWhiteConversion=window.applyPercentage(stats.instantWhiteConversion,100)
+                stats.instantWhiteConversion=window.applyPercentage(stats.instantWhiteConversion,100)
+                stats.whitePollen*=100
+                stats.whitePollen*=100
+                stats.redPollen*=100
+                stats.bluePollen*=100
+                stats.whiteBeeAttack+=20000
+                stats.redBeeAttack+=20000
                 stats.blueBeeAttack+=2
-                stats.defense+=0.1
-                stats.honeyAtHive*=1.1
+                stats.defense+=10
+                stats.honeyAtHive*=10000
                 player.addEffect('inspireCoconutsPassive')
                 player.addEffect('emergencyCoconutShieldPassive')
             },
