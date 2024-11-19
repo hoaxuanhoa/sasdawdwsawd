@@ -12120,7 +12120,7 @@ function BeeSwarmSimulator(DATA){
                         this.state='dead'
                         this.respawnTimer={rhinoBeetle:4*60,ladybug:4*60,spider:10*60,werewolf:1*60,mantis:7*60,scorpion:7*60,kingBeetle:60*60,tunnelBear:120*60}[this.type]/player.monsterRespawnTime
                         
-                        let amountOfTokens=((player.lootLuck-1)|0)
+                        let amountOfTokens=((player.lootLuck+9999)|0)
                         
                         let dropTable,dropAmountTable
 
@@ -12128,7 +12128,7 @@ function BeeSwarmSimulator(DATA){
 
                             case 'rhinoBeetle':
 
-                                amountOfTokens+=4
+                                amountOfTokens+=20
                                 dropTable=['blueberry','blueberry','blueberry','blueberry','blueberry','blueberry','blueberry','blueberry','blueberry','blueberry','blueberry','blueExtract','treat','treat','gumdrops','gumdrops']
                                 dropAmountTable={blueberry:[1,1,1,1,1,1,1,1,1,1,1,3,3,5],blueExtract:[1,1,1,1,1,1,1,1,1,3],treat:[1,1,1,1,1,1,1,1,1,3,3,3,5,5,10],gumdrops:[1,1,1,1,1,1,1,3,3,5]}
 
@@ -12136,7 +12136,7 @@ function BeeSwarmSimulator(DATA){
 
                             case 'ladybug':
 
-                                amountOfTokens+=4
+                                amountOfTokens+=20
                                 dropTable=['strawberry','strawberry','strawberry','strawberry','strawberry','strawberry','strawberry','strawberry','strawberry','strawberry','strawberry','redExtract','treat','treat','gumdrops','gumdrops']
                                 dropAmountTable={strawberry:[1,1,1,1,1,1,1,1,1,1,1,3,3,5],redExtract:[1,1,1,1,1,1,1,1,1,3],treat:[1,1,1,1,1,1,1,1,1,3,3,3,5,5,10],gumdrops:[1,1,1,1,1,1,1,3,3,5]}
 
@@ -12152,7 +12152,7 @@ function BeeSwarmSimulator(DATA){
 
                             case 'werewolf':
 
-                                amountOfTokens+=20
+                                amountOfTokens+=40
                                 dropTable=['treat','treat','treat','pineapple','sunflowerSeed','gumdrops','treat','treat','treat','pineapple','sunflowerSeed','gumdrops','gumdrops','glue','enzymes','oil','fieldDice','fieldDice','smoothDice','treat','treat','treat','pineapple','sunflowerSeed','gumdrops','treat','treat','treat','pineapple','sunflowerSeed','gumdrops','glue','glue','enzymes','oil','fieldDice','fieldDice','smoothDice','loadedDice','ticket','royalJelly','ticket','royalJelly','ticket','ticket','royalJelly','antPass','moonCharm','moonCharm','magicBean','microConverter','microConverter','microConverter','microConverter']
                                 dropAmountTable={treat:[1,1,1,1,5,5,5,15,20,35],enzymes:[1,1,1,1,1,1,1,2,2,3],oil:[1,1,1,1,1,1,1,2,2,3],fieldDice:[1,1,1,1,1,2,2,3],smoothDice:[1,1,1,1,1,1,1,1,1,1,3],loadedDice:[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,3],glue:[1,1,1,1,1,1,1,3,3,5,10,15],pineapple:[1,1,1,1,1,1,3,3,3,5,5,10,15,25],sunflowerSeed:[1,1,1,1,1,1,3,3,3,5,5,10,15,25],gumdrops:[1,1,1,1,1,1,5,5,5,10,10,15],ticket:[1,1,1,1,1,1,3,3,5,10],royalJelly:[1,1,1,1,1,1,3,3,5,10,15],antPass:[1],moonCharm:[1,1,1,1,3,3,5],magicBean:[1,1,1,1,1,2,2,3,5],microConverter:[1,1,1,1,3,5]}
 
