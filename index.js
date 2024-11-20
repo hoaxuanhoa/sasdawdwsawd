@@ -1495,9 +1495,9 @@ function BeeSwarmSimulator(DATA){
                 items.treat.amount+=objects.bees.length*40+10
                 items.pineapple.amount+=numBees+30
                 player.addEffect('haste',false,false,undefined,10)
-                player.honey+=250000*numBees
+                player.honey+=250000000000*numBees
                 player.updateInventory()
-                player.addMessage('+'+MATH.addCommas((250000*numBees)+'')+' Honey')
+                player.addMessage('+'+MATH.addCommas((250000000000*numBees)+'')+' Honey')
                 player.addMessage('+'+MATH.addCommas((objects.bees.length*40+10)+'')+' Treats')
                 player.addMessage('+'+MATH.addCommas((numBees+30)+'')+' Pineapples')
                 player.addMessage('Activated x10 "Haste"')
