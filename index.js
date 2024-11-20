@@ -19193,8 +19193,8 @@ function BeeSwarmSimulator(DATA){
         shovel:{
             
              collectPattern:[[0,0],[-1,0],[1,0],[-2,0],[2,0],[-1,-1],[0,-1],[1,-1],[-1,-2],[0,-2],[1,-2],[-1,-3],[0,-3],[1,-3],[-1,-4],[0,-4],[1,-4],[-1,-5],[0,-5],[1,-5],[0,-6],[0,-7],[0,-8]],
-            collectAmount:13,
-            cooldown:1,
+            collectAmount:999,
+            cooldown:0.000001,
             mesh:function(box,cylinder,sphere,star,finalRotation){
                 
                 cylinder(-0.4,2.2,0.4,0.25,0.05,15,1,3,7,90,0,0,0.25)
