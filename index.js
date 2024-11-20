@@ -1476,9 +1476,9 @@ function BeeSwarmSimulator(DATA){
                 if(!player.extraInfo.treatDispenser)
                     player.extraInfo.treatDispenser=1
 
-                if(Date.now()-player.extraInfo.treatDispenser<60*60*1000){
+                if(Date.now()-player.extraInfo.treatDispenser<1*1*1000){
 
-                    return "The Treat Dispenser is on cooldown! ("+MATH.doTime((60*60-(Date.now()-player.extraInfo.treatDispenser)*0.001)+'')+')'
+                    return "The Treat Dispenser is on cooldown! ("+MATH.doTime((1*1-(Date.now()-player.extraInfo.treatDispenser)*0.001)+'')+')'
                 }
 
             },minX:-54.5,maxX:-50.5,minY:12,maxY:15,minZ:72.75,maxZ:76.75,message:'Use Treat Dispenser',func:function(player){
@@ -1492,15 +1492,15 @@ function BeeSwarmSimulator(DATA){
                     if(beeInfo[objects.bees[i].type].color==='white') numBees++
                 }
 
-                items.treat.amount+=objects.bees.length*4+10
-                items.pineapple.amount+=numBees+3
-                player.addEffect('haste',false,false,undefined,5)
-                player.honey+=250*numBees
+                items.treat.amount+=objects.bees.length*40+10
+                items.pineapple.amount+=numBees+30
+                player.addEffect('haste',false,false,undefined,10)
+                player.honey+=250000*numBees
                 player.updateInventory()
-                player.addMessage('+'+MATH.addCommas((250*numBees)+'')+' Honey')
-                player.addMessage('+'+MATH.addCommas((objects.bees.length*4+10)+'')+' Treats')
-                player.addMessage('+'+MATH.addCommas((numBees+3)+'')+' Pineapples')
-                player.addMessage('Activated x5 "Haste"')
+                player.addMessage('+'+MATH.addCommas((250000*numBees)+'')+' Honey')
+                player.addMessage('+'+MATH.addCommas((objects.bees.length*40+10)+'')+' Treats')
+                player.addMessage('+'+MATH.addCommas((numBees+30)+'')+' Pineapples')
+                player.addMessage('Activated x10 "Haste"')
             }
         },
         honey_dispenser:{
