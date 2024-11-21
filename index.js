@@ -19192,21 +19192,14 @@ function BeeSwarmSimulator(DATA){
         
         shovel:{
             
-             collectPattern:[[0,0],[-1,0],[1,0],[-2,0],[2,0],[-1,-1],[0,-1],[1,-1],[-1,-2],[0,-2],[1,-2],[-1,-3],[0,-3],[1,-3],[-1,-4],[0,-4],[1,-4],[-1,-5],[0,-5],[1,-5],[0,-6],[0,-7],[0,-8]],
-            collectAmount:999,
-            cooldown:0.000001,
-            mesh:function(box,cylinder,sphere,star,finalRotation){
+            collectPattern:[[0,0],[0,-1]],
+            collectAmount:2,
+            cooldown:0.8,
+            mesh:function(box,cylinder,sphere,star){
                 
-                cylinder(-0.4,2.2,0.4,0.25,0.05,15,1,3,7,90,0,0,0.25)
-                cylinder(-0.4,1.6,0.4,0.3,0.05,15,1,3,7,90,0,0,0.3)
-                cylinder(-0.4,1.1,0.4,0.4,0.05,15,1,3,7,90,0,0,0.4)
-                cylinder(-0.4,1.7,0.4,0.3,2.25,10,0.3,1,2,90,0,0,0)
-                box(-0.4,0.5,0.4,0.15,1.4,0.15,false,[0.1,0.8,1.8])
-                sphere(-0.4-0.8,0.85,0.4,0.25,1,100,100,100)
-                sphere(-0.4+0.8,0.85,0.4,0.25,1,100,100,100)
-                sphere(-0.4,0.85,0.4-0.8,0.25,1,100,100,100)
-                sphere(-0.4,0.85,0.4+0.8,0.25,1,100,100,100)
-                finalRotation(20,-20,0)
+                box(-0.3,0,0.6,0.1,0.1,0.8,false,[0.5,0.2,0])
+                box(-0.3,0,1.2,0.3,0.1,0.4,false,[0.2,0.2,0.2])
+            },
             desc:'A trusty shovel.<br><br>Collects 5 pollen from 2 flowers every 1s.',
             cost:['0 honey']
         },
