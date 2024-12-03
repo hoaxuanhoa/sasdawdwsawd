@@ -12118,7 +12118,7 @@ function BeeSwarmSimulator(DATA){
                         
                         player.stats[this.type]++
                         this.state='dead'
-                        this.respawnTimer={rhinoBeetle:4*60,ladybug:4*60,spider:10*60,werewolf:1*60,mantis:7*60,scorpion:7*60,kingBeetle:60*60,tunnelBear:120*60}[this.type]/player.monsterRespawnTime
+                        this.respawnTimer={rhinoBeetle:1*1,ladybug:1*1,spider:1*1,werewolf:1*1,mantis:1*1,scorpion:1*1,kingBeetle:1*1,tunnelBear:1*1}[this.type]/player.monsterRespawnTime
                         
                         let amountOfTokens=((player.lootLuck-1)|0)
                         
